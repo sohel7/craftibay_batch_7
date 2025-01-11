@@ -13,6 +13,11 @@ class MainBottomNavController extends GetxController {
     update();
   }
 
+  void moveToHomePage(){
+    changeIndex(0);
+  }
+
+
   void moveToCategory(){
     changeIndex(1);
   }
