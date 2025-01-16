@@ -1,7 +1,7 @@
 // LEARNING TOPIC
 //===============================
 // NEXT :will start from  ২৯ ডিসে, রাত ১০:০০
-// complete: 36 minute completed
+// complete: 1:10 minute completed
 // TOPIC:
 //     1 ValueListenableBuilder,
 //     2 ValueNotifier
@@ -10,3 +10,4 @@
 //  ২৯ ডিসে, রাত ১০:০০:
 // Counter add to select product quantity
 // Item Details page create and add slider
+// 

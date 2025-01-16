@@ -2,7 +2,11 @@ import 'package:craftybaynew/app/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class PrdductQuantityIncDecButton extends StatefulWidget {
-  const PrdductQuantityIncDecButton({super.key});
+  const PrdductQuantityIncDecButton({super.key, required this.onChange});
+
+  final Function(int) onChange;
+
+
 
   @override
   State<PrdductQuantityIncDecButton> createState() =>
@@ -22,6 +26,7 @@ class _PrdductQuantityIncDecButtonState
             onTap: () {
               if(_count >1) {
                 _count--;
+                widget.onChange(_count);
                 setState(() {});
               }
             }),
@@ -40,6 +45,7 @@ class _PrdductQuantityIncDecButtonState
             onTap: () {
               if(_count < 20) {
                 _count++;
+                widget.onChange(_count);
                 setState(() {});
               }
             }),
