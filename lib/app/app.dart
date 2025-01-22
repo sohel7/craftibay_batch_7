@@ -8,6 +8,7 @@ import 'package:craftybaynew/features/category/ui/screens/category_list_screen.d
 import 'package:craftybaynew/features/common/ui/screens/main_bottom_nav_screen.dart';
 import 'package:craftybaynew/features/product/ui/screens/product_details_screen.dart';
 import 'package:craftybaynew/features/product/ui/screens/product_list_screen.dart';
+import 'package:craftybaynew/features/wish_list/ui/screens/wish_list_screen.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

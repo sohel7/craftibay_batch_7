@@ -3,7 +3,7 @@ import 'dart:ui';
 import 'package:craftybaynew/app/app_colors.dart';
 import 'package:craftybaynew/features/product/ui/widgets/Product_image_carousel_slider.dart';
 import 'package:craftybaynew/features/product/ui/widgets/color_picker_widget.dart';
-import 'package:craftybaynew/features/product/ui/widgets/product_quantity_inc_dec_button.dart';
+import 'package:craftybaynew/features/common/ui/widgets/product_quantity_inc_dec_button.dart';
 import 'package:craftybaynew/features/product/ui/widgets/size_picker_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -23,6 +23,7 @@ class ProductDetailsScreen extends StatefulWidget {
 class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
   @override
   Widget build(BuildContext context) {
+
     final textTheme = Theme.of(context).textTheme;
 
     return Scaffold(
@@ -143,6 +144,8 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                         const Text('''Lorem Ipsum is simply dummy text of the printing and Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the ''', textAlign: TextAlign.start,
                           style: TextStyle(
                           fontSize: 12,
+                            fontWeight: FontWeight.w400,
+                            color: Colors.grey
                         ),),
                       ],
                     ),
