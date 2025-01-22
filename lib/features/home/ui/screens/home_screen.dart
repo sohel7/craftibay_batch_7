@@ -4,7 +4,7 @@ import 'package:craftybaynew/features/home/ui/widgets/appbar_icon_button.dart';
 import 'package:craftybaynew/features/common/ui/widgets/category_item_widget.dart';
 import 'package:craftybaynew/features/home/ui/widgets/home_carousel_slider.dart';
 import 'package:craftybaynew/features/home/ui/widgets/home_section_header.dart';
-import 'package:craftybaynew/features/home/ui/widgets/product_item_widget.dart';
+import 'package:craftybaynew/features/common/ui/widgets/product_item_widget.dart';
 import 'package:craftybaynew/features/home/ui/widgets/product_search_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

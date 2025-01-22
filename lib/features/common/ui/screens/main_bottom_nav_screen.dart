@@ -1,6 +1,8 @@
+import 'package:craftybaynew/features/cart/ui/screens/cart_list_screen.dart';
 import 'package:craftybaynew/features/category/ui/screens/category_list_screen.dart';
 import 'package:craftybaynew/features/common/ui/controllers/main_bottom_nav_controller.dart';
 import 'package:craftybaynew/features/home/ui/screens/home_screen.dart';
+import 'package:craftybaynew/features/wish_list/ui/screens/wish_list_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -8,39 +10,42 @@ import 'package:get/get_core/src/get_main.dart';
 class MainBottomNavScreen extends StatefulWidget {
   const MainBottomNavScreen({super.key});
 
-  static const String name= '/bottom-nav-screen';
+  static const String name = '/bottom-nav-screen';
 
   @override
   State<MainBottomNavScreen> createState() => _MainBottomNavScreenState();
 }
 
 class _MainBottomNavScreenState extends State<MainBottomNavScreen> {
+  final List<Widget> _screens = [
+    HomeScreen(),
+    CategoryListScreen(),
+    CartListScreen(),
+    WishListScreen(),
 
-  final List<Widget> _screens =[
-      HomeScreen(),
-      CategoryListScreen(),
-       HomeScreen(),
-      HomeScreen(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return GetBuilder<MainBottomNavController>(
-        builder: (bottomNavController) {
-      return Scaffold(
-        body: _screens[bottomNavController.selectedIndex],
+      builder: (bottomNavController) {
+        return Scaffold(
+          body: _screens[bottomNavController.selectedIndex],
           bottomNavigationBar: NavigationBar(
-        selectedIndex: bottomNavController.selectedIndex,
-        onDestinationSelected: bottomNavController.changeIndex,
-        destinations: const [
-          NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
-          NavigationDestination(
-              icon: Icon(Icons.category), label: 'Categories'),
-          NavigationDestination(icon: Icon(Icons.shopping_cart), label: 'Cart'),
-          NavigationDestination(
-              icon: Icon(Icons.favorite_outline), label: 'Favourite'),
-        ],
-      ),);
-    },);
+            selectedIndex: bottomNavController.selectedIndex,
+            onDestinationSelected: bottomNavController.changeIndex,
+            destinations: const [
+              NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
+              NavigationDestination(
+                  icon: Icon(Icons.category), label: 'Categories'),
+              NavigationDestination(
+                  icon: Icon(Icons.shopping_cart), label: 'Cart'),
+              NavigationDestination(
+                  icon: Icon(Icons.favorite_outline), label: 'Wish List'),
+            ],
+          ),
+        );
+      },
+    );
   }
 }
